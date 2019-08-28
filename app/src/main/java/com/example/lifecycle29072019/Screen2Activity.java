@@ -1,17 +1,25 @@
 package com.example.lifecycle29072019;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.lifecycle.Lifecycle;
+import androidx.lifecycle.LifecycleOwner;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.Button;
 
 public class Screen2Activity extends AppCompatActivity {
 
+    Button btnIntent2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_screen2);
         Log.d("BBB","onCreate2");
+
+        btnIntent2 = findViewById(R.id.buttonIntent2);
+
+
     }
 
     @Override
