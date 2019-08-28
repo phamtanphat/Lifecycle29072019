@@ -2,16 +2,30 @@ package com.example.lifecycle29072019;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 
 public class Screen3Activity extends AppCompatActivity {
 
+    Button btnIntent3;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_screen3);
         Log.d("BBB","onCreate3");
+        btnIntent3 = findViewById(R.id.buttonIntent3);
+        btnIntent3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(
+                        Screen3Activity.this,
+                        MainActivity.class);
+                startActivity(intent);
+            }
+        });
     }
     @Override
     protected void onStart() {
